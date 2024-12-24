@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col-md-6 offset-md-3"></div>
+<h1>Sales</h1>
+
+
+<div class="card text-bg-light mb-3" style="max-width: 60rem;">
+    <div class="card-header">Sales Record</div>
+    <div class="card-body">
+      <p class="card-title"><strong>Sales ID</strong> {{sales_record.sales_id}} </p>
+      <p class="card-text"><strong>Product ID: </strong>{{sales_record.product_id}}</p>
+      <p class="card-text"><strong>Category id: </strong>{{sales_record.category_id}}</p>
+      <p class="card-text"><strong>Customer ID: </strong>{{sales_record.customer_id}}</p>
+      <p class="card-title"><strong>Quantity: </strong> {{sales_record.quantity}} </p>
+      <p class="card-text"><strong>Unit Price: </strong>{{sales_record.unit_price}}</p>
+      <p class="card-text"><strong>Total Price: </strong>{{sales_record.total}}</p>
+      <p class="card-text"><strong>Date Of Sale: </strong>{{sales_record.time_of_sale}}</p>
+    </div>
+</div>
+
+<a href=" {% url 'sales' %}" class="btn btn-secondary">Back</a>
+<a href=" {% url 'home'  %}" class="btn btn-primary">Update</a>
+<a href=" {% url 'home'  %}" class="btn btn-danger">Delete</a>
+
+{% endblock %}

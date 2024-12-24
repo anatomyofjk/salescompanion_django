@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col-md-6 offset-md-3"></div>
+<h1>Product Category</h1>
+
+
+<div class="card text-bg-light mb-3" style="max-width: 60rem;">
+    <div class="card-header">Product Category</div>
+    <div class="card-body">
+      <p class="card-title"><strong>Category ID</strong> {{product_record.product_id}} </p>
+      <p class="card-text"><strong>Category Name: </strong>{{product_record.product_name}}</p>
+      <p class="card-text"><strong>Category Type: </strong>{{product_record.product_description}}</p>
+      <p class="card-text"><strong>Date Created: </strong>{{product_record.category_id}}</p>
+      <p class="card-title"><strong>Category ID</strong> {{product_record.year}} </p>
+      <p class="card-text"><strong>Category Name: </strong>{{product_record.price}}</p>
+      <p class="card-text"><strong>Category Type: </strong>{{product_record.creation_date}}</p>
+      <p class="card-text"><strong>Date Created: </strong>{{product_record.last_updated}}</p>
+      <p class="card-text"><strong>Date Created: </strong>{{product_record.last_updated_user}}</p>
+    </div>
+</div>
+
+<a href=" {% url 'home' %}" class="btn btn-secondary">Back</a>
+<a href=" {% url 'update_category_record' product_record.product_id %}" class="btn btn-primary">Update</a>
+<a href=" {% url 'delete_category_record' product_record.product_id %}" class="btn btn-danger">Delete</a>
+
+
+
+
+
+{% endblock %}

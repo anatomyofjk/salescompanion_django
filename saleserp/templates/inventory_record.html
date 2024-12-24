@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col-md-6 offset-md-3"></div>
+<h1>Product Inventory</h1>
+
+
+<div class="card text-bg-light mb-3" style="max-width: 60rem;">
+    <div class="card-header">Product Inventory</div>
+    <div class="card-body">
+      <p class="card-title"><strong>Product ID</strong> {{inventory_record.product_id}} </p>
+      <p class="card-text"><strong>Product Name Name: </strong>{{inventory_record.product_name}}</p>
+      <p class="card-text"><strong>Product Description: </strong>{{inventory_record.product_description}}</p>
+      <p class="card-text"><strong>Category ID: </strong>{{inventory_record.category_id}}</p>
+      <p class="card-title"><strong>Opening Stock</strong> {{inventory_record.opening_stock}} </p>
+      <p class="card-text"><strong>Total Stock Sold Name: </strong>{{inventory_record.total_stock_sold}}</p>
+      <p class="card-text"><strong>Remaining Stock Name: </strong>{{inventory_record.remaining_stock}}</p>
+      <p class="card-text"><strong>Creation Date: </strong>{{inventory_record.creation_date}}</p>
+      <p class="card-text"><strong>Last Updated: </strong>{{inventory_record.last_date_updated}}</p>
+      <p class="card-text"><strong>Last Updated User: </strong>{{inventory_record.last_updated_user}}</p>
+    </div>
+</div>
+
+<a href=" {% url 'inventory' %}" class="btn btn-secondary">Back</a>
+
+
+{% endblock %}

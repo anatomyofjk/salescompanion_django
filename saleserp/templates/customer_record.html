@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col-md-6 offset-md-3"></div>
+<h1>Customer Record</h1>
+
+
+<div class="card text-bg-light mb-3" style="max-width: 60rem;">
+    <div class="card-header">Customer</div>
+    <div class="card-body">
+      <p class="card-title"><strong>Customer ID</strong> {{customer_record.customer_id}} </p>
+      <p class="card-text"><strong>Product Name Name: </strong>{{customer_record.firstname}}</p>
+      <p class="card-text"><strong>Product Description: </strong>{{customer_record.middle_name}}</p>
+      <p class="card-text"><strong>Category ID: </strong>{{customer_record.lastname}}</p>
+      <p class="card-title"><strong>Opening Stock</strong> {{customer_record.gender}} </p>
+      <p class="card-text"><strong>Total Stock Sold Name: </strong>{{customer_record.age}}</p>
+      <p class="card-text"><strong>Remaining Stock Name: </strong>{{customer_record.mobile_number}}</p>
+      <p class="card-text"><strong>Creation Date: </strong>{{customer_record.address}}</p>
+      <p class="card-text"><strong>Last Updated: </strong>{{customer_record.occupation}}</p>
+      <p class="card-text"><strong>Last Updated User: </strong>{{customer_record.creation_date}}</p>
+      <p class="card-text"><strong>Last Updated: </strong>{{customer_record.last_updated}}</p>
+    </div>
+</div>
+
+<a href=" {% url 'customers' %}" class="btn btn-secondary">Back</a>
+
+
+{% endblock %}
